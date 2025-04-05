@@ -1,0 +1,63 @@
+﻿<!-- Appointment Details Page -->
+@model Healthcare_And_Wellness.Models.Injection
+@{
+    ViewData["Title"] = "Injection Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2 class="text-center text-dark fw-bold">Appointment Details</h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Type:</strong> @Model.Type</li>
+                <li class="list-group-item"><strong>Name:</strong> @Model.Name</li>
+                <li class="list-group-item"><strong>Location:</strong> @Model.Location</li>
+                <li class="list-group-item"><strong>Limit:</strong> @Model.Limit</li>
+                <li class="list-group-item"><strong>Note:</strong> @Model.Note</li>
+                <li class="list-group-item"><strong>Age:</strong> @Model.Age</li>
+                <li class="list-group-item"><strong>Time:</strong> @Model.Time.ToString("yyyy-MM-dd HH:mm")</li>
+            </ul>
+
+            <div>
+                <h3 class="text-center">Map</h3>
+                <div id="map" class="border border-dark-subtle" style="height: 500px;">
+                </div>
+            </div>
+
+            @if (ViewBag.Role == "Member")
+            {
+                <div class="text-center mt-3">
+                    <a class="btn btn-success btn-lg" href="/Injection/Reserve/@Model.InjectionId">
+                        <i class="bi bi-clock-history"></i> Reserve
+                    </a>
+                </div>
+            }
+
+            <div class="text-center mt-3">
+                <a href="@Url.Action("Index", "Injection")" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAict3ZVGYsfd2KodXh9_NgROJoVfe1bUM&libraries=places&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const location = { lat: @(Model.Lat), lng: @(Model.Lng) };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 13
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: '@(Model.Location)'
+            });
+        }
+    </script>
+}
+

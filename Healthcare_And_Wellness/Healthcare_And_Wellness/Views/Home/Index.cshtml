@@ -1,0 +1,39 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-5 fw-bold mb-3">
+            <i class="bi bi-person-circle me-2 text-primary"></i> Welcome, @Model.Name!
+        </h1>
+
+        <p class="lead text-muted mb-4 px-md-5">
+            Your personalized healthcare dashboard is ready. Whether you're here to manage jobs, book appointments,
+            track wellness, or explore mental health resources — you're in the right place.
+        </p>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="alert alert-info shadow-sm rounded-pill" role="alert">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Some features are still being polished — thank you for your patience!
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a asp-controller="Account" asp-action="Profile" class="btn btn-primary btn-lg px-4 shadow-sm">
+                <i class="bi bi-person-lines-fill me-2"></i> View Profile
+            </a>
+            <a asp-controller="Appointment" asp-action="Index" class="btn btn-outline-secondary btn-lg px-4 shadow-sm">
+                <i class="bi bi-calendar-check me-2"></i> Book Appointment
+            </a>
+            <a asp-controller="Articles" asp-action="Index" class="btn btn-outline-success btn-lg px-4 shadow-sm">
+                <i class="bi bi-journal-medical me-2"></i> Health Resources
+            </a>
+        </div>
+    </div>
+</div>

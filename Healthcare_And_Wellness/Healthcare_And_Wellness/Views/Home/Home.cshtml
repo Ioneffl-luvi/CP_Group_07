@@ -1,0 +1,41 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+            <h1 class="fw-bold text-primary display-5 mb-3">
+                Empowering Health & Wellness in Our Community 💙
+            </h1>
+
+            <p class="lead text-muted">
+                Welcome to the <strong>Healthcare & Community Wellness Platform</strong> — your trusted place for professional recruitment, mental health support, personal fitness, and safe care coordination.
+            </p>
+
+            <ul class="list-unstyled text-muted mb-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Connect with healthcare jobs & opportunities</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Access wellness tools like BMI, workouts & step tracking</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Explore mental health resources & community forums</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Book appointments & access educational content</li>
+            </ul>
+
+            <div class="d-flex flex-wrap gap-3">
+                <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4 shadow-sm">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                </a>
+                <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary btn-lg px-4 shadow-sm">
+                    <i class="bi bi-person-plus me-1"></i> Register
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+            <img src="~/images/background.jpg"
+                 alt="Healthcare illustration"
+                 class="img-fluid rounded-4 shadow-lg animate__animated animate__fadeIn"
+                 style="max-height: 400px; object-fit: cover; border: 3px solid #e6f2ff;" />
+        </div>
+    </div>
+</div>

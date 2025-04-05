@@ -1,0 +1,42 @@
+﻿<!-- User Booking Page (Book.cshtml) -->
+@model List<Healthcare_And_Wellness.Models.Appointment>
+@{
+    ViewData["Title"] = "Book an Appointment";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-success fw-bold">Book an Appointment</h2>
+
+    <div class="card shadow-lg mt-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">Appointment Date</th>
+                            <th scope="col">Service Type</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var appointment in Model)
+                        {
+                            <tr>
+                                <td>@appointment.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@appointment.ServiceType</td>
+                                <td>
+                                    <form asp-action="Book" asp-controller="Appointment" method="post">
+                                        <input type="hidden" name="appointmentId" value="@appointment.Id" />
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            <i class="bi bi-calendar-check"></i> Book
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

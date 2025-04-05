@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "View Article PDF";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">@ViewBag.Title</h2>
+
+    <div class="mt-4 text-center">
+        <iframe src="/uploads/articles/@ViewBag.FileName" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="btn btn-primary">Back to Articles</a>
+    </div>
+</div>
+

@@ -1,0 +1,110 @@
+﻿@model Healthcare_And_Wellness.Models.Article
+@{
+    ViewBag.Title = "Article Details";
+}
+
+@functions {
+    public string HighlightLinks(string content)
+    {
+        if (string.IsNullOrEmpty(content))
+            return string.Empty;
+
+        var regex = new System.Text.RegularExpressions.Regex(@"(http[s]?://[^\s]+)");
+        return regex.Replace(content, "<a href='$1' target='_blank' style='color: #007bff; text-decoration: underline;'>$1</a>");
+    }
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-info text-white">
+            <h2 class="mb-0"><i class="bi bi-journal-text"></i> @Model.Title</h2>
+        </div>
+        <div class="card-body p-4">
+            <p class="text-muted"><i class="bi bi-calendar-event"></i> Published on: @Model.PublishedDate.ToString("MMMM dd, yyyy")</p>
+            <hr />
+            <div class="article-content" style="line-height: 1.7; font-size: 1.1rem;">
+                @Html.Raw(HighlightLinks(Model.Content))
+            </div>
+
+            <hr />
+            <div class="mt-3">
+                <h5><i class="bi bi-volume-up"></i> Listen to this article</h5>
+
+                <div class="mb-2">
+                    <label for="voiceSelect" class="form-label">Select Voice:</label>
+                    <select id="voiceSelect" class="form-select w-auto d-inline-block mb-2"></select>
+                </div>
+
+                <div class="mb-2">
+                    <button id="playBtn" class="btn btn-primary me-2">
+                        <i class="bi bi-play-circle"></i> Play
+                    </button>
+                    <button id="pauseBtn" class="btn btn-warning me-2">
+                        <i class="bi bi-pause-circle"></i> Pause / Resume
+                    </button>
+                    <button id="stopBtn" class="btn btn-danger">
+                        <i class="bi bi-stop-circle"></i> Stop
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Articles
+            </a>
+            <a asp-action="DownloadPdf" asp-route-id="@Model.ArticleId" class="btn btn-danger">
+                <i class="bi bi-file-earmark-pdf"></i> Download PDF
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const synth = window.speechSynthesis;
+        const voiceSelect = document.getElementById("voiceSelect");
+        let voices = [];
+        let utterance;
+
+        function populateVoices() {
+            voices = synth.getVoices();
+            voiceSelect.innerHTML = "";
+            voices.forEach((voice, i) => {
+                const option = document.createElement("option");
+                option.textContent = `${voice.name} (${voice.lang})`;
+                option.value = i;
+                voiceSelect.appendChild(option);
+            });
+        }
+
+        populateVoices();
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = populateVoices;
+        }
+
+        document.getElementById("playBtn").addEventListener("click", () => {
+            if (!synth.speaking) {
+                const text = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Content));
+                utterance = new SpeechSynthesisUtterance(text);
+                const selectedVoice = voices[voiceSelect.value];
+                utterance.voice = selectedVoice;
+                utterance.lang = selectedVoice.lang;
+                synth.speak(utterance);
+            }
+        });
+
+        document.getElementById("pauseBtn").addEventListener("click", () => {
+            if (synth.speaking && !synth.paused) {
+                synth.pause();
+            } else if (synth.paused) {
+                synth.resume();
+            }
+        });
+
+        document.getElementById("stopBtn").addEventListener("click", () => {
+            if (synth.speaking) {
+                synth.cancel();
+            }
+        });
+    </script>
+}

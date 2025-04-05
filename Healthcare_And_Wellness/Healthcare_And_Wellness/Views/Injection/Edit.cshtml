@@ -1,0 +1,124 @@
+﻿@model Injection
+@{
+    ViewBag.Title = "Edit Injection";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="bi bi-pencil-square"></i> Edit Injection</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" asp-for="InjectionId" />
+                        <input type="hidden" asp-for="Lat" />
+                        <input type="hidden" asp-for="Lng" />
+
+                        <div class="mb-3">
+                            <label asp-for="Type" class="form-label">Type</label>
+                            <input asp-for="Type" class="form-control" placeholder="Enter injection type" />
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter injection name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Location" class="form-label">Location</label>
+                            <input asp-for="Location" class="form-control" placeholder="Enter injection location" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Limit" class="form-label">Limit</label>
+                            <input asp-for="Limit" class="form-control" placeholder="Enter injection limit" />
+                            <span asp-validation-for="Limit" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Note" class="form-label">Note</label>
+                            <input asp-for="Note" class="form-control" placeholder="Enter injection note" />
+                            <span asp-validation-for="Note" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Age" class="form-label">Age</label>
+                            <input asp-for="Age" class="form-control" placeholder="Enter injection age" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Time" class="form-label">Time</label>
+                            <input asp-for="Time" class="form-control" type="datetime-local" placeholder="Enter injection time" />
+                            <span asp-validation-for="Time" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Back to Injections
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-check-circle"></i> Update Injection
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="text-center">Map</h3>
+                    <div id="map" class="border border-dark-subtle" style="height: 500px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAict3ZVGYsfd2KodXh9_NgROJoVfe1bUM&libraries=places&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const location = { lat: @(Model.Lat), lng: @(Model.Lng) };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 13
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: '@(Model.Location)'
+            });
+
+             //Autocomplete
+            const input = document.getElementById("Location");
+            const autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.setComponentRestrictions({ country: "ca" });
+
+            autocomplete.addListener("place_changed", () => {
+              const place = autocomplete.getPlace();
+              if (place.geometry) {
+                map.setCenter(place.geometry.location);
+                map.setZoom(15);
+
+                new google.maps.Marker({
+                  map,
+                  position: place.geometry.location,
+                  title: place.name
+                });
+
+                $("#Lat").val(place.geometry.location.lat());
+                $("#Lng").val(place.geometry.location.lng())
+              }
+            });
+        }
+    </script>
+}

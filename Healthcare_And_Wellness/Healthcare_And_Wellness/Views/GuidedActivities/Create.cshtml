@@ -1,0 +1,31 @@
+﻿@model GuidedActivity
+@{
+    ViewData["Title"] = "Create Guided Activity";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-success text-center">Add Guided Activity</h2>
+
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label asp-for="VideoUrl" class="form-label">YouTube Embed URL</label>
+                <input asp-for="VideoUrl" class="form-control" required />
+                <small class="text-muted">e.g. https://www.youtube.com/embed/VIDEO_ID</small>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
+                <button type="submit" class="btn btn-success">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

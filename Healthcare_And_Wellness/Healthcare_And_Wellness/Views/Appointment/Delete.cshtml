@@ -1,0 +1,19 @@
+﻿<!-- Delete Appointment Confirmation Page -->
+@model Healthcare_And_Wellness.Models.Appointment
+@{
+    ViewData["Title"] = "Delete Appointment";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg text-center">
+        <div class="card-body">
+            <h2 class="text-danger fw-bold">Delete Appointment</h2>
+            <p class="text-muted">Are you sure you want to delete this appointment?</p>
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger me-2"><i class="bi bi-trash"></i> Yes, Delete</button>
+                <a href="@Url.Action("Index", "Appointment")" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> No, Go Back</a>
+            </form>
+        </div>
+    </div>
+</div>

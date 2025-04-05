@@ -1,0 +1,75 @@
+﻿@model List<Injection>
+@{
+    ViewData["Title"] = "All Injections";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary fw-bold mb-4">
+        <i class="bi bi-syringe me-2 text-danger"></i> Injections
+    </h2>
+
+    @if (ViewBag.Role == "Admin")
+    {
+        <div class="text-end mb-3">
+            <a asp-action="Create" class="btn btn-primary shadow-sm">
+                <i class="bi bi-plus-circle me-1"></i> Add New Injection
+            </a>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center rounded-pill shadow-sm">
+            <i class="bi bi-info-circle me-2"></i> No injections available.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle shadow-sm">
+                <thead class="table-primary text-center">
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Limit</th>
+                        <th>Note</th>
+                        <th>Age</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var injection in Model)
+                    {
+                        <tr class="text-center">
+                            <td>@injection.Type</td>
+                            <td>@injection.Name</td>
+                            <td>@injection.Location</td>
+                            <td>@injection.Limit</td>
+                            <td>@injection.Note</td>
+                            <td>@injection.Age</td>
+                            <td>@injection.Time</td>
+                            <td>
+                                <div class="d-flex flex-wrap justify-content-center gap-2">
+                                    <a href="@Url.Action("Details", "Injection", new { id = injection.InjectionId })" class="btn btn-info btn-sm shadow-sm">
+                                        <i class="bi bi-eye"></i> View
+                                    </a>
+                                    @if (ViewBag.Role == "Admin")
+                                    {
+                                        <a href="@Url.Action("Edit", "Injection", new { id = injection.InjectionId })" class="btn btn-warning btn-sm shadow-sm">
+                                            <i class="bi bi-pencil"></i> Edit
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Injection", new { id = injection.InjectionId })" class="btn btn-dark btn-sm shadow-sm">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

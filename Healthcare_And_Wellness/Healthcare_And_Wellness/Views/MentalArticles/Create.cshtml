@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Upload Mental Article";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center text-success">Upload Mental Health Article (PDF)</h2>
+
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Article Title</label>
+                <input type="text" class="form-control" name="title" id="title" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="pdfFile">Upload PDF</label>
+                <input type="file" class="form-control" name="pdfFile" id="pdfFile" accept=".pdf" required />
+                <!-- ❌ Removed asp-validation-for -->
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
+                <button type="submit" class="btn btn-success">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>

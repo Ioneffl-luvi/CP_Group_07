@@ -1,0 +1,71 @@
+﻿@model Healthcare_And_Wellness.Models.WorkoutPlan
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-warning text-white text-center">
+                    <h2 class="mb-0"><i class="bi bi-pencil-square"></i> Edit Workout</h2>
+                </div>
+                <div class="card-body p-4">
+
+                    <div class="alert alert-warning text-center">
+                        <i class="bi bi-exclamation-triangle"></i> Make the necessary changes and save your updates!
+                    </div>
+
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" asp-for="WorkoutId" />
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-bold">🏋️ Workout Title</label>
+                            <input asp-for="Title" class="form-control border-warning" required />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-bold">📝 Description</label>
+                            <textarea asp-for="Description" class="form-control border-warning" rows="4" required></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Category" class="form-label fw-bold">📌 Category</label>
+                            <select asp-for="Category" class="form-select border-warning" required>
+                                <option value="" disabled>Choose a category...</option>
+                                <option value="Strength" selected="@(Model.Category == "Strength")">💪 Strength</option>
+                                <option value="Cardio" selected="@(Model.Category == "Cardio")">🏃 Cardio</option>
+                                <option value="Yoga" selected="@(Model.Category == "Yoga")">🧘 Yoga</option>
+                                <option value="HIIT" selected="@(Model.Category == "HIIT")">🔥 HIIT</option>
+                            </select>
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Duration" class="form-label fw-bold">⏳ Duration (minutes)</label>
+                            <input asp-for="Duration" type="number" class="form-control border-warning" min="1" required />
+                            <span asp-validation-for="Duration" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="VideoUrl" class="form-label fw-bold">🎥 Video URL (Optional)</label>
+                            <input asp-for="VideoUrl" type="url" class="form-control border-warning" />
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3">
+                            <a asp-action="Index" class="btn btn-secondary px-4">
+                                <i class="bi bi-arrow-left"></i> Back to Workouts
+                            </a>
+                            <button type="submit" class="btn btn-warning px-4">
+                                <i class="bi bi-pencil"></i> Update Workout
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

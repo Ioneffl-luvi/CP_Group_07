@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Self Assessment Quiz";
+}
+
+<div class="container mt-4">
+    <h2 class="text-primary text-center">🧠 Mental Wellness Self Assessment</h2>
+
+    <form asp-action="Take" method="post" class="mt-4">
+        <div class="mb-3">
+            <label class="form-label">1. I feel overwhelmed or anxious most days.</label>
+            <select name="q1" class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">2. I have trouble sleeping or feel tired often.</label>
+            <select name="q2" class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">3. I find it hard to focus or concentrate.</label>
+            <select name="q3" class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">4. I feel unmotivated or uninterested in daily activities.</label>
+            <select name="q4" class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">5. I experience mood swings or irritability.</label>
+            <select name="q5" class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">View History</a>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

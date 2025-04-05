@@ -1,0 +1,66 @@
+﻿@model List<Healthcare_And_Wellness.Models.BmiCalculator>
+
+@{
+    ViewData["Title"] = "BMI History";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-success mb-4">
+        <i class="bi bi-clock-history me-2"></i> Your BMI History
+    </h1>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["ErrorMessage"]</div>
+    }
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["SuccessMessage"]</div>
+    }
+
+    @if (Model.Count == 0)
+    {
+        <p class="text-center text-muted">No BMI records found.</p>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped align-middle">
+                <thead class="table-success text-center">
+                    <tr>
+                        <th>Date</th>
+                        <th>Height (m)</th>
+                        <th>Weight (kg)</th>
+                        <th>BMI</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bmi in Model)
+                    {
+                        <tr class="text-center">
+                            <td>@bmi.DateRecorded.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>@bmi.Height</td>
+                            <td>@bmi.Weight</td>
+                            <td>@bmi.BmiResult?.ToString("0.00")</td>
+                            <td>
+                                <form asp-action="DeleteBmiRecord" asp-controller="BmiCalculator" method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@bmi.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this record?');">
+                                        <i class="bi bi-trash-fill"></i> Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left me-1"></i> Back to Home
+        </a>
+    </div>
+</div>

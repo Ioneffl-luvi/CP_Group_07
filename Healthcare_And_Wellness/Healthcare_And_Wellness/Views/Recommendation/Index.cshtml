@@ -1,0 +1,24 @@
+﻿@model Healthcare_And_Wellness.Models.HealthRecommendation
+@{
+    ViewData["Title"] = "Personalized Recommendation";
+}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center text-primary fw-bold mb-4">💡 Your Personalized Recommendation</h2>
+
+    <div class="alert alert-info shadow-sm px-4 py-3">
+        <pre class="mb-0" style="white-space: pre-wrap; font-size: 1.05rem;">@Model.RecommendationText</pre>
+        <div class="text-muted small mt-3">
+            <i class="bi bi-clock-history"></i> Generated on: @Model.GeneratedAt.ToString("f")
+        </div>
+    </div>
+
+    <div class="text-center mt-4 d-flex justify-content-center gap-3">
+        <a asp-action="History" class="btn btn-outline-primary px-4">
+            <i class="bi bi-list"></i> View Past Recommendations
+        </a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary px-4">
+            <i class="bi bi-house-door"></i> Back to Home
+        </a>
+    </div>
+</div>

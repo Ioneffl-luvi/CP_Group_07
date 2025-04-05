@@ -1,0 +1,46 @@
+﻿@model Healthcare_And_Wellness.Models.WorkoutPlan
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="mb-0"><i class="bi bi-trash3-fill"></i> Delete Workout</h3>
+                </div>
+                <div class="card-body p-4 text-center">
+
+                    <div class="alert alert-danger">
+                        <i class="bi bi-exclamation-triangle"></i> Are you sure you want to permanently delete this workout? This action <strong>cannot</strong> be undone!
+                    </div>
+
+                    <dl class="row mt-4 text-start">
+                        <dt class="col-sm-4 text-muted">🏋️ Workout Title</dt>
+                        <dd class="col-sm-8"><span class="badge bg-primary">@Model.Title</span></dd>
+
+                        <dt class="col-sm-4 text-muted">📌 Category</dt>
+                        <dd class="col-sm-8"><span class="badge bg-secondary">@Model.Category</span></dd>
+
+                        <dt class="col-sm-4 text-muted">⏳ Duration</dt>
+                        <dd class="col-sm-8"><span class="badge bg-success">@Model.Duration minutes</span></dd>
+
+                        <dt class="col-sm-4 text-muted">📝 Description</dt>
+                        <dd class="col-sm-8">@Model.Description</dd>
+                    </dl>
+
+                    <form asp-action="DeleteConfirmed" method="post">
+                        <input type="hidden" asp-for="WorkoutId" />
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <a asp-action="Index" class="btn btn-secondary px-4">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                            <button type="submit" class="btn btn-danger px-4">
+                                <i class="bi bi-trash-fill"></i> Confirm Delete
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Help";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header text-white d-flex align-items-center"
+             style="background: linear-gradient(90deg, #4A90E2, #007BFF); border-bottom: 4px solid #0056b3;">
+            <i class="bi bi-question-circle-fill fs-3 me-3"></i>
+            <div>
+                <h3 class="mb-0 fw-bold">Help</h3>
+                <small class="text-white-50">Find answers to common questions and platform issues</small>
+            </div>
+        </div>
+
+        <div class="card-body" style="background-color: #f0f4ff;">
+            <p class="fs-5 mb-4">
+                Welcome to the <strong>Smart Medical Helpers</strong> Help Center. If you're stuck, this page can guide you through the most common user issues.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary h-100">
+                        <h5 class="text-primary mb-2"><i class="bi bi-lock-fill me-2"></i> Can't Log In?</h5>
+                        <p class="mb-0">Ensure your username and password are correct. If you've forgotten them, use the <em>Forgot Password</em> link on the login page to reset securely.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-info h-100">
+                        <h5 class="text-info mb-2"><i class="bi bi-journal-text me-2"></i> How to Apply for a Job</h5>
+                        <p class="mb-0">Go to <strong>Job Management → List of Jobs</strong>, choose a position, and click <strong>Apply</strong> to submit your application.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-danger h-100">
+                        <h5 class="text-danger mb-2"><i class="bi bi-bug-fill me-2"></i> Facing a Bug or Issue?</h5>
+                        <p class="mb-0">
+                            Please report issues or questions by emailing us directly at
+                            <a href="mailto:cso6775@conestogac.on.ca" class="fw-bold text-decoration-none text-danger">cso6775@conestogac.on.ca</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-secondary h-100">
+                        <h5 class="text-secondary mb-2"><i class="bi bi-book-half me-2"></i> Need a Walkthrough?</h5>
+                        <p class="mb-0">Visit our <a asp-controller="Home" asp-action="HowToUse" class="fw-bold text-decoration-none text-secondary">How to Use</a> page for a full step-by-step guide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-light mt-5 border-start border-4 border-primary shadow-sm">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong>Tip:</strong> For the best experience, use the latest version of Chrome, Edge, or Firefox.
+            </div>
+
+            <p class="mt-4 text-muted fst-italic text-center">
+                Our goal is to make healthcare accessible and easy. We're here to support you at every step.
+            </p>
+        </div>
+    </div>
+</div>

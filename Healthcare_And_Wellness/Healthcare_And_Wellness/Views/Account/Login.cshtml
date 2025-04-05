@@ -1,0 +1,86 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg border-0 rounded-4 animate__animated animate__fadeIn" style="max-width: 420px; width: 100%; backdrop-filter: blur(6px); background-color: rgba(255, 255, 255, 0.9);">
+        <div class="card-header bg-primary text-white text-center rounded-top py-4">
+            <h3 class="mb-0">
+                <i class="bi bi-shield-lock-fill me-2"></i> Secure Login
+            </h3>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div id="successMessage" class="alert alert-success rounded-0 mb-0">
+                <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessage"]
+            </div>
+        }
+
+        @if (TempData["SessionTimeoutMessage"] != null)
+        {
+            <div id="errorMessage" class="alert alert-warning rounded-0 mb-0">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["SessionTimeoutMessage"]
+            </div>
+        }
+
+        <div class="card-body px-4 py-5">
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="All" class="alert alert-danger"></div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Username" class="form-control" placeholder="Username" autocomplete="username" />
+                    <label asp-for="Username">Username</label>
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" autocomplete="current-password" />
+                    <label asp-for="Password">Password</label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                    </button>
+                </div>
+
+                <div class="text-center mb-2">
+                    <a asp-action="ForgotPassword" class="text-muted small">
+                        <i class="bi bi-question-circle me-1"></i> Forgot Password?
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="card-footer bg-light text-center rounded-bottom py-3">
+            <small class="text-muted">
+                Don't have an account?
+                <a asp-action="Register" class="fw-bold text-primary text-decoration-none">Register here</a>
+            </small>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        setTimeout(() => {
+            const successMessage = document.getElementById("successMessage");
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (successMessage) {
+                successMessage.style.transition = "opacity 0.5s ease";
+                successMessage.style.opacity = 0;
+                setTimeout(() => successMessage.remove(), 300);
+            }
+
+            if (errorMessage) {
+                errorMessage.style.transition = "opacity 0.5s ease";
+                errorMessage.style.opacity = 0;
+                setTimeout(() => errorMessage.remove(), 300);
+            }
+        }, 5000);
+    </script>
+}

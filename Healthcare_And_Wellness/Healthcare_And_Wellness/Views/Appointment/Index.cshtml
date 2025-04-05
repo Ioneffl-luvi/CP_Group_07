@@ -1,0 +1,87 @@
+﻿@model List<Healthcare_And_Wellness.Models.Appointment>
+@{
+    ViewData["Title"] = "Appointments";
+    var role = Context.Session.GetString("Role");
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary fw-bold mb-4">
+        <i class="bi bi-calendar-check-fill me-2 text-success"></i> Appointments
+    </h2>
+
+    @if (role == "Admin")
+    {
+        <div class="text-end mb-4">
+            <a class="btn btn-success shadow-sm" href="@Url.Action("CreateAvailability", "Appointment")">
+                <i class="bi bi-calendar-plus me-1"></i> Create Available Slots
+            </a>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center rounded-pill shadow-sm">
+            <i class="bi bi-info-circle me-2"></i> No appointments scheduled yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle shadow-sm">
+                <thead class="table-primary text-center">
+                    <tr>
+                        <th>Appointment Date</th>
+                        <th>Service Type</th>
+                        <th>Status</th>
+                        @if (role == "Admin")
+                        {
+                            <th>Booked By</th>
+                        }
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var appointment in Model)
+                    {
+                        <tr class="text-center">
+                            <td>@appointment.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>@appointment.ServiceType</td>
+                            <td class="fw-semibold
+                                @(appointment.Status == "Approved" ? "text-success" :
+                                  appointment.Status == "Pending" ? "text-warning" : "text-secondary")">
+                                @appointment.Status
+                            </td>
+                            @if (role == "Admin")
+                            {
+                                <td>@(appointment.User != null ? appointment.User.Username : "Available")</td>
+                            }
+                            <td>
+                                <div class="d-flex flex-wrap justify-content-center gap-2">
+                                    <a href="@Url.Action("Details", "Appointment", new { id = appointment.Id })" class="btn btn-info btn-sm shadow-sm">
+                                        <i class="bi bi-eye"></i> View
+                                    </a>
+
+                                    @if (role == "Admin")
+                                    {
+                                        <a href="@Url.Action("Approve", "Appointment", new { id = appointment.Id })" class="btn btn-success btn-sm shadow-sm">
+                                            <i class="bi bi-check"></i> Approve
+                                        </a>
+                                        <a href="@Url.Action("Reject", "Appointment", new { id = appointment.Id })" class="btn btn-danger btn-sm shadow-sm">
+                                            <i class="bi bi-x"></i> Reject
+                                        </a>
+                                        <a href="@Url.Action("Edit", "Appointment", new { id = appointment.Id })" class="btn btn-warning btn-sm shadow-sm">
+                                            <i class="bi bi-pencil"></i> Edit
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Appointment", new { id = appointment.Id })" class="btn btn-dark btn-sm shadow-sm">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

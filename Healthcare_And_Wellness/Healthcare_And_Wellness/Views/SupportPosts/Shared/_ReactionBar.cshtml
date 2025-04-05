@@ -1,0 +1,12 @@
+﻿@model SupportPost
+
+<form asp-action="React" method="post" class="d-inline me-2">
+    <input type="hidden" name="postId" value="@Model.PostId" />
+    <button name="type" value="like" class="btn btn-sm btn-outline-primary">👍 Like</button>
+    <button name="type" value="love" class="btn btn-sm btn-outline-danger">❤️ Love</button>
+    <button name="type" value="support" class="btn btn-sm btn-outline-success">🤝 Support</button>
+</form>
+
+<span class="badge bg-light text-dark">
+    Total: @Model.Reactions?.Count() ?? 0
+</span>

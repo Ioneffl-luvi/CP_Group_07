@@ -1,0 +1,27 @@
+﻿@model SelfAssessment
+@{
+    ViewData["Title"] = "Assessment Result";
+    var score = ViewBag.Score as int? ?? Model.TotalScore;
+}
+
+<div class="container mt-5 text-center">
+    <h2 class="text-success">🧪 Your Self Assessment Result</h2>
+    <h1 class="display-3 my-3">@score / 20</h1>
+
+    @{
+        if (score <= 5)
+        {
+            <p class="text-success fw-bold">You seem to be doing well! Keep up your wellness habits. 😊</p>
+        }
+        else if (score <= 10)
+        {
+            <p class="text-warning fw-bold">Mild signs of stress. Consider taking short breaks or mindfulness exercises. 🧘</p>
+        }
+        else
+        {
+            <p class="text-danger fw-bold">You may be experiencing elevated stress or anxiety. Reach out for support. ❤️</p>
+        }
+    }
+
+    <a asp-action="Index" class="btn btn-primary mt-3">View Assessment History</a>
+</div>

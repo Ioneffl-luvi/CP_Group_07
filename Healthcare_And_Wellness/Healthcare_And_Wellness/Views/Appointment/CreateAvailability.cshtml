@@ -1,0 +1,26 @@
+﻿<!-- Create Availability Page -->
+@model Healthcare_And_Wellness.Models.Appointment
+@{
+    ViewData["Title"] = "Create Available Slot";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2 class="text-center text-primary fw-bold">Create Available Appointment Slot</h2>
+            <form asp-action="CreateAvailability" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Date & Time</label>
+                    <input type="datetime-local" asp-for="AppointmentDate" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Service Type</label>
+                    <input type="text" asp-for="ServiceType" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100"><i class="bi bi-plus-lg"></i> Create Slot</button>
+            </form>
+        </div>
+    </div>
+</div>

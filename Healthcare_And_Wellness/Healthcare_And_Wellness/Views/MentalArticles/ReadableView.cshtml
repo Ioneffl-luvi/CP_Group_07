@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Read Aloud PDF";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-success text-white text-center rounded-top">
+            <h3 class="mb-0">🗣️ @ViewBag.Title</h3>
+        </div>
+
+        <div class="card-body">
+            <div class="text-center mb-3">
+                <label for="voiceSelect" class="form-label fw-bold me-2">Select Voice:</label>
+                <select id="voiceSelect" class="form-select d-inline-block w-auto"></select>
+            </div>
+
+            <div class="text-center mb-3">
+                <button onclick="readAloud()" class="btn btn-primary me-2">🔊 Read Aloud</button>
+                <button onclick="pauseSpeech()" class="btn btn-warning me-2">⏸ Pause</button>
+                <button onclick="stopSpeech()" class="btn btn-danger">⏹ Stop</button>
+            </div>
+
+            <pre id="pdfText" class="border rounded p-3" style="white-space: pre-wrap;">
+                @ViewBag.ExtractedText
+            </pre>
+        </div>
+
+        <div class="card-footer text-center bg-light">
+            <a asp-action="Index" class="btn btn-outline-secondary">⬅️ Back to Articles</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    let utterance;
+    let words = [];
+    let charOffsets = [];
+    let selectedVoice = null;
+    let allVoices = [];
+
+    window.speechSynthesis.onvoiceschanged = populateVoices;
+
+    function populateVoices() {
+        const voiceSelect = document.getElementById("voiceSelect");
+        allVoices = window.speechSynthesis.getVoices();
+
+        voiceSelect.innerHTML = "";
+        allVoices.forEach((voice, index) => {
+            const option = document.createElement("option");
+            option.value = index;
+            option.textContent = `${voice.name} (${voice.lang})${voice.default ? " — Default" : ""}`;
+            voiceSelect.appendChild(option);
+        });
+
+        voiceSelect.onchange = () => {
+            selectedVoice = allVoices[voiceSelect.value];
+        };
+
+        if (allVoices.length > 0) {
+            voiceSelect.value = allVoices.findIndex(v => v.default) ?? 0;
+            selectedVoice = allVoices[voiceSelect.value];
+        }
+    }
+
+    window.onload = function () {
+        const text = document.getElementById("pdfText").innerText.trim();
+        words = text.split(/\s+/);
+        let offset = 0;
+
+        const highlighted = words.map((word, i) => {
+            charOffsets.push(offset);
+            offset += word.length + 1;
+            return `<span id="word-${i}" style="margin-right: 4px;">${word}</span>`;
+        });
+
+        document.getElementById("pdfText").innerHTML = highlighted.join(" ");
+    };
+
+    function readAloud() {
+        const text = words.join(" ");
+        stopSpeech();
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 1;
+        utterance.pitch = 1;
+
+        if (selectedVoice) {
+            utterance.voice = selectedVoice;
+            utterance.lang = selectedVoice.lang;
+        }
+
+        utterance.onboundary = function (event) {
+            if (event.name === "word") {
+                const wordIndex = findWordIndex(event.charIndex);
+                highlightProgress(wordIndex);
+            }
+        };
+
+        utterance.onend = function () {
+            setTimeout(removeHighlight, 500);
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function pauseSpeech() {
+        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+            window.speechSynthesis.pause();
+        } else if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+        }
+    }
+
+    function stopSpeech() {
+        window.speechSynthesis.cancel();
+        removeHighlight();
+    }
+
+    function highlightProgress(index) {
+        for (let i = 0; i < words.length; i++) {
+            const span = document.getElementById(`word-${i}`);
+            if (!span) continue;
+
+            if (i < index) span.style.backgroundColor = "#d3d3d3";
+            else if (i === index) span.style.backgroundColor = "yellow";
+            else span.style.backgroundColor = "";
+        }
+    }
+
+    function removeHighlight() {
+        for (let i = 0; i < words.length; i++) {
+            const span = document.getElementById(`word-${i}`);
+            if (span) span.style.backgroundColor = "";
+        }
+    }
+
+    function findWordIndex(charIndex) {
+        for (let i = 0; i < charOffsets.length; i++) {
+            if (charIndex < charOffsets[i]) {
+                return i - 1;
+            }
+        }
+        return words.length - 1;
+    }
+</script>

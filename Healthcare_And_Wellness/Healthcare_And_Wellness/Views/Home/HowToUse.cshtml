@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "How To Use";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header text-white d-flex align-items-center"
+             style="background: linear-gradient(90deg, #4A90E2, #007BFF); border-bottom: 4px solid #0056b3;">
+            <i class="bi bi-play-circle-fill fs-3 me-3"></i>
+            <div>
+                <h3 class="mb-0 fw-bold">How to Use</h3>
+                <small class="text-white-50">Step-by-step guide to explore and interact with the platform</small>
+            </div>
+        </div>
+
+        <div class="card-body" style="background-color: #f0f4ff;">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-primary">
+                        <h5 class="text-primary mb-2"><i class="bi bi-person-plus-fill me-2"></i> Register or Login</h5>
+                        <p>Create your account or log in to access full platform features and tools.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-info">
+                        <h5 class="text-info mb-2"><i class="bi bi-compass me-2"></i> Navigate Easily</h5>
+                        <p>Use the top menu to find jobs, appointments, health calculators, and mental health resources.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-success">
+                        <h5 class="text-success mb-2"><i class="bi bi-person-circle me-2"></i> Update Your Profile</h5>
+                        <p>Click the profile icon on the top right to update personal details or upload a photo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-warning">
+                        <h5 class="text-warning mb-2"><i class="bi bi-briefcase-fill me-2"></i> Apply for Jobs</h5>
+                        <p>Go to <strong>Job Management → List of Jobs</strong> and submit your application directly.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-secondary">
+                        <h5 class="text-secondary mb-2"><i class="bi bi-heart-pulse-fill me-2"></i> Health & Wellness Tools</h5>
+                        <p>Access the BMI Calculator, Step Tracker, and Personalized Recommendations under <strong>Healthcare Tools</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded shadow-sm h-100 border-start border-4 border-danger">
+                        <h5 class="text-danger mb-2"><i class="bi bi-emoji-smile-fill me-2"></i> Mental Wellness Support</h5>
+                        <p>Engage with the community, read articles, try guided activities, or take self-assessments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info mt-5 shadow-sm border-start border-4 border-primary">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                For troubleshooting or further guidance, visit the <a asp-controller="Home" asp-action="Help" class="fw-bold text-decoration-none">Help Page</a> or reach out to our support team.
+            </div>
+        </div>
+    </div>
+</div>

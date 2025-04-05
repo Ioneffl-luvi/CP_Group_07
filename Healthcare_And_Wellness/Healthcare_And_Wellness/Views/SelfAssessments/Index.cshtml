@@ -1,0 +1,42 @@
+﻿@model List<SelfAssessment>
+@{
+    ViewData["Title"] = "Assessment History";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary">🧠 Your Self Assessment History</h2>
+
+    @if (!Model.Any())
+    {
+        <p class="text-muted text-center mt-3">You haven't taken any assessments yet.</p>
+    }
+    else
+    {
+        <table class="table table-striped mt-4">
+            <thead class="table-primary">
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Score</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@Model[i].TakenAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@Model[i].TotalScore</td>
+                        <td>
+                            <a asp-action="Result" asp-route-id="@Model[i].AssessmentId" class="btn btn-outline-info btn-sm">View</a>
+                            <a asp-action="Delete" asp-route-id="@Model[i].AssessmentId" class="btn btn-outline-danger btn-sm ms-1">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <a asp-action="Take" class="btn btn-success">Take Another Assessment</a>
+</div>

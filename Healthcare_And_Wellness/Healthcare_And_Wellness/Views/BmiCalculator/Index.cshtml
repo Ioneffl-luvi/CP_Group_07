@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "BMI Home";
+}
+
+<div class="container mt-5 text-center">
+    <h1 class="display-5 fw-bold text-primary mb-3">
+        <i class="bi bi-heart-pulse-fill me-2 text-danger"></i> BMI Dashboard
+    </h1>
+    <p class="lead text-muted mb-4">Track and manage your Body Mass Index for a healthier lifestyle.</p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a asp-action="BmiCalculation" class="btn btn-primary btn-lg px-4 shadow-sm">
+            <i class="bi bi-calculator me-2"></i> Calculate BMI
+        </a>
+        <a asp-action="BmiHistory" class="btn btn-success btn-lg px-4 shadow-sm">
+            <i class="bi bi-clock-history me-2"></i> View BMI History
+        </a>
+    </div>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success text-center mt-4">
+            @TempData["Message"]
+        </div>
+    }
+</div>

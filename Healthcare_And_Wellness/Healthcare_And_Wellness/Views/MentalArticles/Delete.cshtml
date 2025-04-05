@@ -1,0 +1,17 @@
+﻿@model MentalArticle
+@{
+    ViewData["Title"] = "Delete Article";
+}
+
+<div class="container mt-5">
+    <div class="alert alert-danger">
+        <h4>Are you sure you want to delete this article?</h4>
+        <p><strong>@Model.Title</strong></p>
+        <p>This will also remove the PDF from the server.</p>
+
+        <form asp-action="DeleteConfirmed" asp-route-id="@Model.ArticleId" method="post">
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</div>

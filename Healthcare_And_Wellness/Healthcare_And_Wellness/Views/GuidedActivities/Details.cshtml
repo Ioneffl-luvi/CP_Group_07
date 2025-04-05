@@ -1,0 +1,30 @@
+﻿@model GuidedActivity
+@{
+    ViewData["Title"] = "Activity Details";
+}
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-4" style="color: #2D6A9F;">
+        @Model.Title
+    </h2>
+
+    <div class="ratio ratio-16x9 mb-4 shadow-lg rounded-4 overflow-hidden">
+        <iframe src="@Model.VideoUrl" allowfullscreen title="Guided activity: @Model.Title" class="rounded"></iframe>
+    </div>
+
+    <div class="bg-light p-4 rounded-4 shadow-sm mb-4">
+        <p class="lead text-secondary mb-0" style="line-height: 1.7;">@Model.Description</p>
+    </div>
+
+    <div class="text-center">
+        <a asp-action="Index" class="btn btn-primary btn-lg px-5">
+            <i class="bi bi-arrow-left-circle"></i> Back to Activities
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+}

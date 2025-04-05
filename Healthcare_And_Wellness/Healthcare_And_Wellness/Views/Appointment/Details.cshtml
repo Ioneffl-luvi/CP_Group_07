@@ -1,0 +1,45 @@
+﻿@model Healthcare_And_Wellness.Models.Appointment
+@{
+    ViewData["Title"] = "Appointment Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h3 class="mb-0"><i class="bi bi-info-circle-fill me-2"></i> Appointment Details</h3>
+                </div>
+
+                <div class="card-body bg-white bg-opacity-75 p-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong><i class="bi bi-calendar-event me-2 text-primary"></i> Date:</strong>
+                            <span>@Model.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong><i class="bi bi-clipboard-check me-2 text-success"></i> Service:</strong>
+                            <span>@Model.ServiceType</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong><i class="bi bi-circle-half me-2 text-warning"></i> Status:</strong>
+                            <span class="fw-semibold @(Model.Status == "Approved" ? "text-success" : "text-warning")">
+                                @Model.Status
+                            </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong><i class="bi bi-person-fill me-2 text-secondary"></i> Booked By:</strong>
+                            <span>@(Model.User != null ? Model.User.Username : "Available")</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-center mt-4">
+                        <a href="@Url.Action("Index", "Appointment")" class="btn btn-outline-primary px-4 shadow-sm">
+                            <i class="bi bi-arrow-left me-1"></i> Back to Appointments
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

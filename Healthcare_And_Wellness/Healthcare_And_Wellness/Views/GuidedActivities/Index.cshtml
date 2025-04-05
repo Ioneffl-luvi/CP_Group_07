@@ -1,0 +1,72 @@
+﻿@model List<GuidedActivity>
+@{
+    ViewData["Title"] = "Guided Activities";
+    var isAdmin = Context.Session.GetString("Role") == "Admin";
+}
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5" style="color: #2D6A9F;">
+        🎥 Guided Activities
+    </h2>
+
+    @if (isAdmin)
+    {
+        <div class="text-end mb-4">
+            <a asp-action="Create" class="btn btn-success px-4 py-2">
+                <i class="bi bi-plus-circle"></i> Add Activity
+            </a>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center fs-5">
+            No guided activities available yet.
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var activity in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-lg rounded-4 card-hover">
+                        <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+                            <iframe src="@activity.VideoUrl" allowfullscreen title="Guided activity: @activity.Title" class="rounded-top"></iframe>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold mb-2" style="color: #343a40;">@activity.Title</h5>
+                            <p class="card-text text-muted">@activity.Description</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a asp-action="Details" asp-route-id="@activity.ActivityId" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-eye"></i> View
+                                </a>
+
+                                @if (isAdmin)
+                                {
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <a asp-action="Edit" asp-route-id="@activity.ActivityId" class="btn btn-outline-warning">
+                                            <i class="bi bi-pencil"></i> Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@activity.ActivityId" class="btn btn-outline-danger">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
+            card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
+        });
+    </script>
+}

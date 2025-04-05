@@ -1,0 +1,55 @@
+﻿.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.background-fade-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content-wrapper {
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 4px 0 !important;
+    border-top: 1px solid #ddd;
+}
+
+form, .container {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.btn.active {
+    box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+    font-weight: 600;
+}
