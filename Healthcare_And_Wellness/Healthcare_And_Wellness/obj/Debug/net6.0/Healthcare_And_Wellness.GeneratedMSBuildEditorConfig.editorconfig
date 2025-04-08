@@ -9,297 +9,297 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Healthcare_And_Wellness
 build_property.RootNamespace = Healthcare_And_Wellness
-build_property.ProjectDir = C:\CP_Group07\Healthcare_And_Wellness\Healthcare_And_Wellness\
+build_property.ProjectDir = C:\CP_Group_07\Healthcare_And_Wellness\Healthcare_And_Wellness\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\CP_Group07\Healthcare_And_Wellness\Healthcare_And_Wellness
+build_property.MSBuildProjectDirectory = C:\CP_Group_07\Healthcare_And_Wellness\Healthcare_And_Wellness
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 6.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ForgotPassword.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Login.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Profile.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Register.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ResetPassword.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ViewUsers.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Account/ViewUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3VXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/AddJobs.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/AddJobs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxBZGRKb2JzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/JobPage.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/JobPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxKb2JQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/ListJobs.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Administrator/ListJobs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxMaXN0Sm9icy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Applicant/AddUser.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Applicant/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYW50XEFkZFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Applicant/ListJobs.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Applicant/ListJobs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYW50XExpc3RKb2JzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Book.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Book.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/CreateAvailability.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/CreateAvailability.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlQXZhaWxhYmlsaXR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Details.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Edit.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Details.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Edit.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Articles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/BmiCalculation.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/BmiCalculation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm1pQ2FsY3VsYXRvclxCbWlDYWxjdWxhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/BmiHistory.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/BmiHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm1pQ2FsY3VsYXRvclxCbWlIaXN0b3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/BmiCalculator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm1pQ2FsY3VsYXRvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpZGVkQWN0aXZpdGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpZGVkQWN0aXZpdGllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Details.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpZGVkQWN0aXZpdGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Edit.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpZGVkQWN0aXZpdGllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/GuidedActivities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpZGVkQWN0aXZpdGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/AboutUs.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Help.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Help.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIZWxwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Home.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/HowToUse.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/HowToUse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb3dUb1VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Details.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Edit.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/ListInjection.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Injection/ListInjection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5qZWN0aW9uXExpc3RJbmplY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ReadableView.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ReadableView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcUmVhZGFibGVWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ViewPage.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ViewPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcVmlld1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ViewPdf.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/MentalArticles/ViewPdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudGFsQXJ0aWNsZXNcVmlld1BkZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Recommendation/History.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Recommendation/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjb21tZW5kYXRpb25cSGlzdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Recommendation/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Recommendation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjb21tZW5kYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZkFzc2Vzc21lbnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZkFzc2Vzc21lbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Result.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Result.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZkFzc2Vzc21lbnRzXFJlc3VsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Take.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SelfAssessments/Take.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZkFzc2Vzc21lbnRzXFRha2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Shared/_Layout.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFRyYWNrZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFRyYWNrZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/LogSteps.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/StepTracker/LogSteps.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RlcFRyYWNrZXJcTG9nU3RlcHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_CommentForm.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_CommentForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXFNoYXJlZFxfQ29tbWVudEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_ReactionBar.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_ReactionBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXFNoYXJlZFxfUmVhY3Rpb25CYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_ReportModal.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/SupportPosts/Shared/_ReportModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFBvc3RzXFNoYXJlZFxfUmVwb3J0TW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Create.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Delete.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Edit.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Index.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/StartWorkout.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/Workout/StartWorkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxTdGFydFdvcmtvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/_ViewImports.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CP_Group07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/_ViewStart.cshtml]
+[C:/CP_Group_07/Healthcare_And_Wellness/Healthcare_And_Wellness/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

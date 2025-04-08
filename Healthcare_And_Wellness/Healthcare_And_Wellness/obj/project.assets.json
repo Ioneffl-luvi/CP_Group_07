@@ -7144,11 +7144,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CP_Group07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\Healthcare_And_Wellness.csproj",
+      "projectUniqueName": "C:\\CP_Group_07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\Healthcare_And_Wellness.csproj",
       "projectName": "Healthcare_And_Wellness",
-      "projectPath": "C:\\CP_Group07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\Healthcare_And_Wellness.csproj",
+      "projectPath": "C:\\CP_Group_07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\Healthcare_And_Wellness.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\CP_Group07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\obj\\",
+      "outputPath": "C:\\CP_Group_07\\Healthcare_And_Wellness\\Healthcare_And_Wellness\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

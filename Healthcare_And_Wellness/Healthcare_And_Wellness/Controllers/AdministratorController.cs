@@ -65,70 +65,68 @@ namespace Healthcare_And_Wellness.Controllers
             List<Applicant> users = _managementContext.applicants.Include(m => m.Job).Where(m => m.userID == id).ToList();
             if (!users.Any()) return NotFound();
 
-            var user = users.First();
-            SendEmail(user.emailUser, "Congratulations!", "You have been accepted.");
-            user.statusUser = "Accepted";
-            _managementContext.applicants.Update(user);
+            string fromAddress = "t18196667@gmail.com";
+            string toAddress = users[0].emailUser;
+
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(fromAddress, "umqbzzxblkvgmgle"),
+                EnableSsl = true,
+            };
+
+            var mailMessage = new MailMessage()
+            {
+                From = new MailAddress(fromAddress),
+                Subject = "Response about job Opportunity",
+                Body = "Congratulations! You have been accepted.",
+                IsBodyHtml = true
+            };
+
+            mailMessage.To.Add(toAddress);
+            smtpClient.Send(mailMessage);
+
+            users[0].statusUser = "Accepted";
+            _managementContext.applicants.Update(users[0]);
             _managementContext.SaveChanges();
 
-            return RedirectToAction("JobPage", "Administrator", new { id = user.jobID });
+            return RedirectToAction("JobPage", "Administrator", new { id = users[0].jobID });
         }
-
         public IActionResult SendGmailDeny(int id)
         {
-            List<Applicant> users = _managementContext.applicants.Include(m => m.Job).Where(m => m.userID == id).ToList();
+            List<Applicant> users = _managementContext.applicants
+                .Include(m => m.Job)
+                .Where(m => m.userID == id)
+                .ToList();
+
             if (!users.Any()) return NotFound();
 
-            var user = users.First();
-            SendEmail(user.emailUser, "Job Application Update", "Unfortunately, you have been denied.");
-            user.statusUser = "Denied";
-            _managementContext.applicants.Update(user);
+            string fromAddress = "t18196667@gmail.com";
+            string toAddress = users[0].emailUser;
+
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(fromAddress, "umqbzzxblkvgmgle"),
+                EnableSsl = true,
+            };
+
+            var mailMessage = new MailMessage()
+            {
+                From = new MailAddress(fromAddress),
+                Subject = "Response about job Opportunity",
+                Body = "Unfortunately, you have been denied.",
+                IsBodyHtml = true
+            };
+
+            mailMessage.To.Add(toAddress);
+            smtpClient.Send(mailMessage);
+
+            users[0].statusUser = "Denied";
+            _managementContext.applicants.Update(users[0]);
             _managementContext.SaveChanges();
 
-            return RedirectToAction("JobPage", "Administrator", new { id = user.jobID });
-        }
-
-        private bool SendEmail(string toAddress, string subject, string body)
-        {
-            try
-            {
-                string fromAddress = "lakhwindertoor1246@gmail.com";
-                string appPassword = "lwkerowyjnqmqqf";
-
-                using (var smtpClient = new SmtpClient("smtp.gmail.com"))
-                {
-                    smtpClient.Port = 587;
-                    smtpClient.Credentials = new NetworkCredential(fromAddress, appPassword);
-                    smtpClient.EnableSsl = true;
-                    smtpClient.UseDefaultCredentials = false;
-
-                    var mailMessage = new MailMessage()
-                    {
-                        From = new MailAddress(fromAddress),
-                        Subject = subject,
-                        Body = body,
-                        IsBodyHtml = true
-                    };
-
-                    mailMessage.To.Add(toAddress);
-                    smtpClient.Send(mailMessage);
-                }
-
-                Console.WriteLine("Email sent successfully to: " + toAddress);
-                return true;
-            }
-            catch (SmtpException ex)
-            {
-                Console.WriteLine($"SMTP Error: {ex.StatusCode} - {ex.Message}");
-                if (ex.InnerException != null)
-                    Console.WriteLine("Inner Exception: " + ex.InnerException.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"General Error: {ex.Message}");
-            }
-
-            return false;
+            return RedirectToAction("JobPage", "Administrator", new { id = users[0].jobID });
         }
     }
 }
